@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PSLE Science in 11 Days — A Triage Plan</title>
+<style>
+  :root{
+    --ink:#1c1c1a;
+    --ink-2:#4a4a46;
+    --ink-3:#78786f;
+    --line:#e3e1d9;
+    --line-2:#efece4;
+    --bg:#faf9f5;
+    --card:#ffffff;
+    --accent:#2f6fbf;
+    --hi:#f2f6fb;
+    --hi-line:#c9dcf0;
+    --warn-bg:#fdf6ec;
+    --warn-line:#e8d3ae;
+    --stop-bg:#fcebeb;
+    --stop-line:#f0c0c0;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;padding:40px 24px 72px;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size:15px;line-height:1.7;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:900px;margin:0 auto}
+
+  header.top{border-bottom:2px solid var(--ink);padding-bottom:18px;margin-bottom:32px}
+  .kicker{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600;margin:0 0 8px}
+  h1{font-size:28px;line-height:1.3;margin:0 0 10px;font-weight:700;letter-spacing:-.01em}
+  .sub{font-size:14.5px;color:var(--ink-2);margin:0}
+  .meta{font-size:13px;color:var(--ink-3);margin-top:12px}
+
+  h2{font-size:19px;font-weight:700;margin:46px 0 6px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+  h2 .num{color:var(--accent);font-variant-numeric:tabular-nums;margin-right:8px}
+  h3{font-size:15.5px;font-weight:700;margin:26px 0 6px}
+  p{margin:10px 0}
+  .lead{font-size:15.5px;color:var(--ink-2)}
+  ul,ol{margin:10px 0;padding-left:22px}
+  li{margin:6px 0}
+  b,strong{font-weight:700}
+
+  .callout{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:10px;padding:15px 18px;margin:20px 0}
+  .callout.info{background:var(--hi);border-color:var(--hi-line)}
+  .callout.stop{background:var(--stop-bg);border-color:var(--stop-line)}
+  .callout p:first-child{margin-top:0}
+  .callout p:last-child{margin-bottom:0}
+  .callout .lbl{font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--ink-3);display:block;margin-bottom:6px}
+
+  table{width:100%;border-collapse:collapse;margin:16px 0;font-size:13.5px;background:var(--card)}
+  caption{caption-side:top;text-align:left;font-size:13px;color:var(--ink-3);padding-bottom:8px}
+  th{text-align:left;font-weight:700;font-size:12.5px;padding:9px 10px;border-bottom:1.5px solid var(--ink);background:#f6f4ed;white-space:nowrap}
+  td{padding:9px 10px;border-bottom:1px solid var(--line-2);vertical-align:top}
+  tbody tr:nth-child(even) td{background:#fcfbf8}
+  .n{font-variant-numeric:tabular-nums;white-space:nowrap}
+  .ctr{text-align:center}
+  .day{font-weight:700;white-space:nowrap}
+  .off{color:var(--ink-3)}
+
+  .idea{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 20px;margin:14px 0}
+  .idea .head{display:flex;gap:12px;align-items:flex-start}
+  .rank{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:var(--hi);color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:700}
+  .idea h3{margin:0;font-size:15.5px}
+  .idea .body{padding-left:38px}
+  .idea .line{font-size:14px;margin:8px 0}
+  .demo{background:#f8f7f2;border-left:3px solid var(--accent);border-radius:0 6px 6px 0;padding:10px 14px;margin:10px 0;font-size:13.5px}
+  .demo .qtag{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:700;display:block;margin-bottom:4px}
+  .demo p{margin:4px 0}
+
+  .frame{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:10px 0}
+  .frame .fl{font-size:12px;color:var(--ink-3);font-weight:700;letter-spacing:.04em;display:block;margin-bottom:4px}
+  .frame .ft{font-size:14px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:#f6f4ed;border-radius:5px;padding:8px 10px;display:block;line-height:1.6}
+
+  footer{margin-top:50px;padding-top:18px;border-top:1px solid var(--line);font-size:12.5px;color:var(--ink-3)}
+
+  @media print{
+    body{background:#fff;padding:0;font-size:11pt}
+    h2{page-break-after:avoid}
+    .idea,.frame,.callout,table{page-break-inside:avoid}
+  }
+  @media (max-width:640px){
+    body{padding:24px 14px 48px}
+    h1{font-size:22px}
+    table{font-size:12px}
+    th,td{padding:7px 6px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <p class="kicker">Singapore PSLE · Standard Science · 29 September 2026</p>
+  <h1>PSLE Science in 11 Days<br>A triage plan</h1>
+  <p class="sub">For a child who struggles to remember and has gaps in the basics</p>
+  <p class="meta">Prepared 18 September 2026 &nbsp;|&nbsp; Science paper: Tuesday 29 September, 08:15</p>
+</header>
+
+<h2><span class="num">01</span>Start with the honest position</h2>
+
+<p>In 11 days you cannot rebuild a child's understanding of Science from scratch, and trying will make things worse &mdash; she will meet failure on every topic and lose confidence right before the exam.</p>
+
+<p>What you <em>can</em> do is different, and it is worth doing:</p>
+<ul>
+  <li><b>Secure six core ideas</b> that sit behind roughly half the paper, taught with something she can see and touch.</li>
+  <li><b>Learn ten answer frames</b> &mdash; sentence shapes she can reuse, so she is not starting from a blank page.</li>
+  <li><b>Stop the technique losses</b>, which are often 10&ndash;15 marks for a child like this: blanks left empty, one point written where two were needed, units missing.</li>
+</ul>
+
+<p>The goal is not to cover the syllabus. The goal is to <b>convert the marks that are already within reach</b> and to stop her freezing. A child who currently writes "I don't know" can realistically pick up marks on the 1- and 2-mark parts, which make up most of Booklet B.</p>
+
+<div class="callout">
+  <span class="lbl">What to say to her</span>
+  <p style="margin-bottom:0">"We are not going to learn everything. We are going to learn six things really well, and I promise you will be able to answer more questions than you think." A child who believes she can improve studies; a child who thinks she is hopeless does not.</p>
+</div>
+
+<h2><span class="num">02</span>The one change that matters</h2>
+
+<p><b>Stop re-reading and stop memorising lists. Start attaching every fact to a reason.</b></p>
+
+<p>Memory fails when facts are floating and unconnected &mdash; which is exactly why "very weak at remembering" and "doesn't understand the basic concept" are the same problem, not two. She is not forgetting because her memory is bad. She is forgetting because there is nothing to hang the fact on.</p>
+
+<p>So apply this rule for the next 11 days. For every fact she is asked to remember, she must be able to finish the sentence <b>"because&hellip;"</b>. If she cannot, do not memorise it &mdash; drop it. Dropping it is the right decision. A small number of understood facts beats a large number of half-remembered ones.</p>
+
+<div class="callout info">
+  <span class="lbl">Practical test</span>
+  <p style="margin-bottom:0">Ask her to explain one idea to you out loud, in her own words, as if you were the student. If she can, she knows it. If she goes quiet or recites phrases that don't connect, she doesn't &mdash; and that is your signal to spend more time there, not to move on. <b>Teach-back is the fastest test of understanding there is.</b></p>
+</div>
+
+<h2><span class="num">03</span>The six ideas to secure</h2>
+
+<p>Each of these has a two-minute demonstration. Do the demonstration first, then let her say the idea in her own words. Do not explain it before she has seen it.</p>
+
+<div class="idea">
+  <div class="head">
+    <div class="rank">1</div>
+    <h3>Heat moves from hot to cold, until both reach the same temperature</h3>
+  </div>
+  <div class="body">
+    <div class="demo">
+      <span class="qtag">Two-minute demo</span>
+      <p>Put a metal spoon and a wooden spoon in a mug of hot water. Wait one minute. Touch both. The metal one feels much hotter &mdash; heat travelled through the metal quickly and slowly through the wood.</p>
+    </div>
+    <p class="line"><b>Answers questions about:</b> why a metal tap feels colder than a wooden door; why a cold drink can gets wet on the outside; why metal pans have wooden or plastic handles; why wires snap on a cold night.</p>
+  </div>
+</div>
+
+<div class="idea">
+  <div class="head">
+    <div class="rank">2</div>
+    <h3>Heat gain or loss changes state &mdash; and while it is changing, the temperature stays the same</h3>
+  </div>
+  <div class="body">
+    <div class="demo">
+      <span class="qtag">Two-minute demo</span>
+      <p>Ice cubes in a pot with a thermometer, on low heat. Watch the thermometer sit at 0 &deg;C while the ice melts, and only start climbing once all the ice is gone.</p>
+      <p>This is not a warm-up exercise &mdash; the graph showing a flat line during a change of state is <b>explicitly part of the 2026 syllabus</b>. Seeing it happen once is worth more than reading about it ten times.</p>
+    </div>
+    <p class="line"><b>Answers questions about:</b> the flat part of a temperature&ndash;time graph; the water cycle; why wet clothes dry faster on a windy day.</p>
+  </div>
+</div>
+
+<div class="idea">
+  <div class="head">
+    <div class="rank">3</div>
+    <h3>Energy is transferred and converted &mdash; it is never used up or lost</h3>
+  </div>
+  <div class="body">
+    <div class="demo">
+      <span class="qtag">Two-minute demo</span>
+      <p>Switch on a torch for five minutes, then feel the bulb &mdash; it is warm. Electrical energy became light <em>and</em> heat. Then roll a ball down a ramp: it never climbs back to the same height on the other side, because some energy went into heat and sound.</p>
+    </div>
+    <p class="line"><b>Answers questions about:</b> every "state the energy conversion" question; why a toy slows down; renewable and non-renewable energy resources.</p>
+  </div>
+</div>
+
+<div class="idea">
+  <div class="head">
+    <div class="rank">4</div>
+    <h3>Current only flows around a complete loop</h3>
+  </div>
+  <div class="body">
+    <div class="demo">
+      <span class="qtag">Two-minute demo</span>
+      <p>A torch with the battery pushed slightly out &mdash; nothing happens. Push it in &mdash; light. Open the torch and take the bulb out &mdash; nothing. Put it back &mdash; light.</p>
+      <p>Then say the key sentence out loud: <b>break the loop anywhere and everything in that loop stops.</b> That single sentence answers most circuit questions.</p>
+    </div>
+    <p class="line"><b>Answers questions about:</b> why a bulb doesn't light; why the other bulb stays lit in a parallel circuit; conductors and insulators; electromagnets.</p>
+  </div>
+</div>
+
+<div class="idea">
+  <div class="head">
+    <div class="rank">5</div>
+    <h3>Friction opposes motion</h3>
+  </div>
+  <div class="body">
+    <div class="demo">
+      <span class="qtag">Two-minute demo</span>
+      <p>Push a coin across a table, then across a towel. Then rub your palms together hard for ten seconds &mdash; they get warm. Friction slows things down <em>and</em> turns motion into heat.</p>
+    </div>
+    <p class="line"><b>Answers questions about:</b> why a ball stops sooner on a rough floor; why we oil machine parts; why shoes have grip; why a slide gets hot.</p>
+  </div>
+</div>
+
+<div class="idea">
+  <div class="head">
+    <div class="rank">6</div>
+    <h3>Plants make food from light, carbon dioxide and water &mdash; and all living things need oxygen to release the energy in food</h3>
+  </div>
+  <div class="body">
+    <div class="demo">
+      <span class="qtag">Two-minute demo</span>
+      <p>Use a recipe. Three ingredients: light, carbon dioxide, water. That is all the 2026 syllabus requires &mdash; chlorophyll is no longer a required keyword.</p>
+      <p>Then the second half: food is the fuel, oxygen is what it burns in. Animals cannot make their own food, so they eat plants or other animals &mdash; which is exactly what a food chain shows.</p>
+    </div>
+    <p class="line"><b>Answers questions about:</b> photosynthesis; plant transport; food chains and webs; why animals depend on plants.</p>
+  </div>
+</div>
+
+<h2><span class="num">04</span>Ten answer frames to memorise</h2>
+
+<p>This is the highest-value thing in this document. Do not memorise facts &mdash; memorise these ten sentence shapes. She fills in the brackets with whatever the question is about. The same frame works across dozens of questions.</p>
+
+<div class="frame">
+  <span class="fl">1 &middot; Condensation</span>
+  <span class="ft">The warm water vapour lost heat to the cooler [surface], condensing into water droplets.</span>
+</div>
+<div class="frame">
+  <span class="fl">2 &middot; Evaporation</span>
+  <span class="ft">The water gained heat and evaporated, changing from a liquid to water vapour.</span>
+</div>
+<div class="frame">
+  <span class="fl">3 &middot; Expansion</span>
+  <span class="ft">The [object] gained heat and expanded, so [result].</span>
+</div>
+<div class="frame">
+  <span class="fl">4 &middot; Contraction while fixed in place</span>
+  <span class="ft">The [object] lost heat and contracted. As it was fixed tightly, it [stretched / snapped].</span>
+</div>
+<div class="frame">
+  <span class="fl">5 &middot; Friction</span>
+  <span class="ft">The frictional force between [A] and [B] is greater. Friction acts in the opposite direction to the motion, so [object] slows down more and travels a shorter distance.</span>
+</div>
+<div class="frame">
+  <span class="fl">6 &middot; Energy conversion chain</span>
+  <span class="ft">[form] energy &rarr; [form] energy &rarr; [form] energy.</span>
+</div>
+<div class="frame">
+  <span class="fl">7 &middot; Fair test</span>
+  <span class="ft">To make it a fair test, [variable] must be kept the same.</span>
+</div>
+<div class="frame">
+  <span class="fl">8 &middot; Why repeat an experiment</span>
+  <span class="ft">The experiment was repeated to obtain more reliable results.</span>
+</div>
+<div class="frame">
+  <span class="fl">9 &middot; Describing a relationship from data (2 marks)</span>
+  <span class="ft">As [X] increases, [Y] increases until [value]. Beyond that, [Y] decreases.</span>
+</div>
+<div class="frame">
+  <span class="fl">10 &middot; Parallel circuit</span>
+  <span class="ft">Current can still flow through the other path, which is still a closed circuit, so the other bulb remains lit.</span>
+</div>
+
+<div class="callout info">
+  <span class="lbl">How to use these</span>
+  <p style="margin-bottom:0">Have her write all ten out by hand, in her own words, on <b>one sheet of paper</b>. Do not write it for her &mdash; the act of writing it is the memorising. Then she reads only that sheet on the morning of the exam. Handwriting it herself also means the wording is hers, which means she can actually reproduce it under pressure.</p>
+</div>
+
+<h2><span class="num">05</span>The 11-day plan</h2>
+
+<p>Science is the last paper, so her time is squeezed by English, Maths and Mother Tongue. The plan below respects that. Sessions are 60&ndash;90 minutes &mdash; longer than that and nothing sticks.</p>
+
+<table>
+  <caption>Dates and other papers are per the SEAB 2026 timetable</caption>
+  <thead>
+    <tr><th>Date</th><th>Focus</th><th>Time</th></tr>
+  </thead>
+  <tbody>
+    <tr><td class="day">Fri 18 Sep</td><td>Ideas 1 and 2, with both demos. She writes answer frames 1&ndash;4 in her own words.</td><td class="n">45 min</td></tr>
+    <tr><td class="day">Sat 19 Sep</td><td>Ideas 3 and 4, with demos. Then 20 multiple-choice questions from a past paper, only on those topics.</td><td class="n">75 min</td></tr>
+    <tr><td class="day">Sun 20 Sep</td><td>Ideas 5 and 6. She writes frames 5&ndash;10. Then 20 more multiple-choice questions.</td><td class="n">75 min</td></tr>
+    <tr><td class="day">Mon 21 Sep</td><td>Past paper, Booklet A only, timed 40 minutes. Then review <em>every</em> wrong answer by asking "why is this wrong?"</td><td class="n">90 min</td></tr>
+    <tr><td class="day">Tue 22 Sep</td><td>Booklet B practice &mdash; five questions, using the frames. Focus on writing complete sentences, not on getting everything right.</td><td class="n">75 min</td></tr>
+    <tr><td class="day">Wed 23 Sep</td><td>Light day: 15 multiple-choice questions only. Early night before English.</td><td class="n">30 min</td></tr>
+    <tr><td class="day">Thu 24 Sep</td><td class="off">English paper. No Science.</td><td class="n off">&mdash;</td></tr>
+    <tr><td class="day">Fri 25 Sep</td><td class="off">Maths paper. No Science.</td><td class="n off">&mdash;</td></tr>
+    <tr><td class="day">Sat 26 Sep</td><td>One full past paper, timed 1 h 45 min, no interruptions. Mark it together and list the top five error patterns.</td><td class="n">2 h 30</td></tr>
+    <tr><td class="day">Sun 27 Sep</td><td>Fix only those five error patterns. Re-do those exact question types. <b>Last heavy day.</b></td><td class="n">90 min</td></tr>
+    <tr><td class="day">Mon 28 Sep</td><td class="off">Mother Tongue paper. In the evening she reads her own one-page sheet only. <b>No new content.</b> Sleep early.</td><td class="n">20 min</td></tr>
+    <tr><td class="day">Tue 29 Sep</td><td><b>Science paper, 08:15.</b> Report by 07:45.</td><td class="n">&mdash;</td></tr>
+  </tbody>
+</table>
+
+<h2><span class="num">06</span>Multiple choice technique &mdash; this is now 60 marks</h2>
+
+<p>Under the 2026 format, Booklet A is 30 questions worth 2 marks each &mdash; <b>60 of the 100 marks</b>. It used to be 56. Multiple choice is no longer the easy part, and it is where technique pays fastest.</p>
+
+<ul>
+  <li><b>Never leave a blank.</b> No marks are deducted for a wrong answer. A guess is always better than an empty box &mdash; but guess by eliminating first, not randomly.</li>
+  <li><b>Read the last line of the question first.</b> It tells her what she is actually being asked, so she reads the paragraph with a purpose.</li>
+  <li><b>Cross out anything with the wrong unit.</b> Millimetres where centimetres were asked, degrees where centimetres were asked.</li>
+  <li><b>Watch for "increase in" versus the plain value.</b> A question asking for the <em>increase</em> in length is not asking for the length. This trap caught students in 2024.</li>
+  <li><b>If two options both look right, find the one word that differs between them.</b> That word is the whole question.</li>
+  <li><b>For graph questions, read the axis labels and units before looking at the line.</b> Most graph errors are axis errors.</li>
+  <li><b>Ignore the story.</b> When the question is about otah, a toy boat or a football match, the science is still one of the six ideas. Find the science words and ignore the rest.</li>
+  <li><b>Budget about 45 minutes</b> for Booklet A, then move on. Do not let one question eat five minutes.</li>
+</ul>
+
+<div class="callout info">
+  <span class="lbl">New in 2026</span>
+  <p style="margin-bottom:0">The paper now includes <b>linked questions</b> &mdash; up to two pairs of questions based on the same scenario or experiment. If she misreads the shared context, she can lose both marks in a pair. Tell her: when two questions in a row look related, re-read the setup once before answering the second one.</p>
+</div>
+
+<h2><span class="num">07</span>Booklet B technique</h2>
+
+<ul>
+  <li><b>The number of marks tells her the number of points.</b> A [2] question needs two ideas; a [3] needs three. If she has written one point for a [2] question, she has already lost a mark.</li>
+  <li><b>Underline the command word.</b> <em>State</em> means one line. <em>Describe</em> means what happens. <em>Explain</em> means she must use <b>because</b> or <b>so</b>. An explanation without a because is not an explanation.</li>
+  <li><b>Always write something.</b> A single correct keyword can earn a mark. An empty line earns nothing, ever.</li>
+  <li><b>Use the answer frames.</b> Same sentence shape, new words. This is why they are worth memorising &mdash; they remove the blank-page problem.</li>
+  <li><b>Short and scientific, not long and story-like.</b> Booklet B rewards precision, not length.</li>
+  <li><b>Budget about 50 minutes</b>, and keep the last 10 minutes to check that no part has been left blank.</li>
+</ul>
+
+<h2><span class="num">08</span>On the day</h2>
+
+<ul>
+  <li>Report by <b>07:45</b>. The paper starts at 08:15 and runs 1 hour 45 minutes.</li>
+  <li>Pack the night before: 2B pencil, soft eraser, dark blue or black pen, ruler. Pencil for shading the multiple-choice options, pen for written answers.</li>
+  <li>She reads <b>only her own one-page sheet</b> in the morning. No new material, no past papers.</li>
+  <li>If she gets stuck, mark the question and move on. Come back at the end. Panic costs more marks than ignorance.</li>
+  <li>There will be at least one question about a situation she has never seen. That is normal and deliberate. The answer is still one of the six ideas.</li>
+  <li>A proper night's sleep beats an extra hour of revision. This is not a platitude &mdash; recall collapses without sleep.</li>
+</ul>
+
+<h2><span class="num">09</span>What not to do</h2>
+
+<div class="callout stop">
+  <span class="lbl">Avoid these</span>
+  <ul style="margin-bottom:0">
+    <li><b>Don't buy new assessment books now.</b> More material is the opposite of what she needs.</li>
+    <li><b>Don't make her memorise topic lists.</b> That is the approach that has already failed her.</li>
+    <li><b>Don't sit with her for three hours.</b> 60&ndash;90 minutes, then stop, even if it is going well.</li>
+    <li><b>Don't correct every mistake during practice.</b> Let her finish, then review. Constant interruption stops her from thinking.</li>
+    <li><b>Don't do a full paper every day.</b> One timed paper, then repair what it revealed.</li>
+    <li><b>Don't introduce new topics after 27 September.</b> Consolidation beats coverage in the final days.</li>
+    <li><b>Don't say "you should know this" or "we did this already."</b> If she knew it, she would not be asking. This sentence teaches her to hide what she doesn't know, which is the worst possible outcome one week before an exam.</li>
+  </ul>
+</div>
+
+<div class="callout">
+  <span class="lbl">Praise the process, not the result</span>
+  <p style="margin-bottom:0">"That explanation was clear" works. "You're so clever" does not &mdash; it makes her afraid of the next question in case it proves otherwise. When she gets something wrong, the useful question is not "why didn't you know that?" but <b>"what do you think happens first?"</b> Get her talking, then correct. Silence is the thing to fear, not wrong answers.</p>
+</div>
+
+<footer>
+  <p>Format, dates and syllabus details in this plan are taken from the SEAB <i>PSLE Science (0009) syllabus for examination from 2026</i>, the SEAB 2026 PSLE examination timetable, and the MOE <i>Primary Science Syllabus 2023</i>. Topic weightings are drawn from the companion five-year topic analysis.</p>
+  <p>This is exam-triage guidance, not a diagnosis. If you think there may be a specific learning difficulty behind the difficulty with recall, that is worth raising with her school after the exams &mdash; not in the eleven days before them.</p>
+</footer>
+
+</div>
+</body>
+</html>
